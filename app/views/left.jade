@@ -1,0 +1,40 @@
+//
+   Created with JetBrains WebStorm.
+   User: shidoudou
+   Date: 13-12-3
+   Time: 下午10:53
+   To change this template use File | Settings | File Templates.
+ul.nav.nav-list
+    div.span2
+        div(data-ng-include="'views/data.html'")
+            div(ng-controller='dataController')
+                ul(ng-repeat='item in items')
+                    li(ng-click='displayData') #{item.name}
+                    li #{item.email}
+                    li #{item._id}
+//        li: a(title="主页" href="/") home
+//        li: a(title="登录" href="/login") login
+//        li: a(title="注册" href="/reg") register
+//- if (true)
+//    div.container-fluid
+//        div.row-fluid
+//            div.span2
+//                ul.nav.nav-list
+//                    li.nav-header 列表标题
+//                    li.active
+//                        a(href="#") 首页
+//                    li
+//                        a(href="#") 库
+//                    li
+//                        a(href="#") 应用
+//                    li.nav-header 功能列表
+//                    li
+//                        a(href="#") 资料</a>
+//                    li
+//                        a(href="#") 设置
+//                    li.divider
+//                    li
+//                        a(href="#") 帮助
+//            div.span6
+//- else
+

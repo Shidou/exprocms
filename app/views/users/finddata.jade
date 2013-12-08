@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block content
+    .container-fluid
+        .row-fluid
+            .span12
+                ul.nav.nav-tabs
+                    li.active
+                        a(href="/")  主页
+                    li
+                        a(href="#") 发表
+                    li
+                        a(href="#") 登出
+    div(data-ng-include="'views/data.html'")
+script(type='text/javascript', src='/js/ng_http.js')

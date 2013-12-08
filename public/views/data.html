@@ -1,0 +1,13 @@
+<ul class="nav nav-list">
+    <div class="span2">
+        <div ng-app="myapp">
+            <div ng-controller='dataController'>
+                <ul ng-repeat='item in items'>
+                    <li ng-click='displayData'>{{item.name}}</li>
+                    <li>{{item.email}}</li>
+                    <li>{{item._id}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</ul>
