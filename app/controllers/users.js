@@ -21,6 +21,8 @@ exports.signin = function(req, res) {
     });
 };
 
+
+
 /**
  * Show sign up form
  */
@@ -43,7 +45,7 @@ exports.signout = function(req, res) {
  * Session
  */
 exports.session = function(req, res) {
-    res.redirect('/');
+    res.redirect('/finddata');
 };
 
 /**
@@ -64,6 +66,13 @@ exports.create = function(req, res) {
             if (err) return next(err);
             return res.redirect('/');
         });
+    });
+};
+
+/*find data*/
+exports.findout = function(req, res) {
+    res.render('users/finddata', {
+        title: 'data'
     });
 };
 

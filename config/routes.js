@@ -1,12 +1,31 @@
 module.exports = function(app, passport, auth) {
     //User Routes
-    var users = require('../app/controllers/users');
+    var users = require('../app/controllers/users'),
+        Post = require('./postdata.js');
     app.get('/signin', users.signin);
     app.get('/signup', users.signup);
     app.get('/signout', users.signout);
+    app.get('/finddata',users.findout);
+
+    //get data
+//    app.get('/finddata', function (req, res) {
+//        Post.get(null, function (err, posts) {
+//            if (err) {
+//                posts = [];
+//            }
+//            res.render('index', {
+//                title: 'data',
+//                user: req.session.user,
+//                posts: users,
+//                success: req.flash('success').toString(),
+//                error: req.flash('error').toString()
+//            });
+//        });
+//    });
 
     //Setting up the users api
     app.post('/users', users.create);
+
 
     app.post('/users/session', passport.authenticate('local', {
         failureRedirect: '/signin',
